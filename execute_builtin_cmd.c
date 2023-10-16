@@ -94,7 +94,7 @@ int echo_bul(char **cmd, int st)
  */
 int history_dis(__attribute__((unused))char **c, __attribute__((unused))int st)
 {
-	char *line = NULL;	
+	char *line = NULL;
 	size_t len = 0;
 	char *er;
 	int counter = 0;

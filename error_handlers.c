@@ -1,6 +1,25 @@
 #include "simple_shell.h"
 
 /**
+ * error_msg - Function that prints custom error message
+ * @argv: Arguments
+ * @c: Error Count
+ */
+
+void error_msg(char **argv, int c)
+{
+	char *er = _itoa(c);
+
+	PRINT(argv[0]);
+	PRINT(": ");
+	PRINT(er);
+	PRINT(": Can't open ");
+	PRINT(argv[1]);
+	PRINT("\n");
+	free(er);
+}
+
+/**
  * print_error - Funcion that displays error message
  * @input: Input from user
  * @counter: Count loop shell
@@ -42,23 +61,3 @@ void _prerror(char **argv, int c, char **cmd)
 	PRINT("\n");
 	free(er);
 }
-
-/**
- * error_file - Function that prints custom error message
- * @argv: Arguments
- * @c: Error Count
- */
-
-void error_file(char **argv, int c)
-{
-	char *er = _itoa(c);
-
-	PRINT(argv[0]);
-	PRINT(": ");
-	PRINT(er);
-	PRINT(": Can't open ");
-	PRINT(argv[1]);
-	PRINT("\n");
-	free(er);
-}
-

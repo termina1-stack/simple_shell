@@ -19,7 +19,7 @@ char *_strtok(char *str, const char *delim)
 		return (NULL);
 	for (i = 0; tokens[i] != '\0'; i++)
 	{
-		if (check_delim(tokens[i], delim) == 0)
+		if (delim_checker(tokens[i], delim) == 0)
 			break;
 	}
 	if (new_token[i] == '\0' || new_token[i] == '#')
@@ -31,7 +31,7 @@ char *_strtok(char *str, const char *delim)
 	new_token = tokens;
 	for (i = 0; new_token[i] != '\0'; i++)
 	{
-		if (check_delim(new_token[i], delim) == 1)
+		if (delim_checker(new_token[i], delim) == 1)
 			break;
 	}
 	if (new_token[i] == '\0')
@@ -47,12 +47,12 @@ char *_strtok(char *str, const char *delim)
 }
 
 /**
- * check_delim - Function that checks if a character matchs any character
+ * delim_checker - Function that checks if a character matchs any character
  * @c: character to be check
  * @str: string of delimiters
  * Return: 1 on success, 0 on failure
  */
-unsigned int check_delim(char c, const char *str)
+unsigned int delim_checker(char c, const char *str)
 {
 	unsigned int i;
 

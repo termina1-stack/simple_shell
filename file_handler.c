@@ -45,7 +45,7 @@ void read_file(char *file, char **argv)
 	fp = fopen(file, "r");
 	if (fp == NULL)
 	{
-		error_file(argv, count);
+		error_msg(argv, count);
 		exit(127);
 	}
 	while ((getline(&line, &len, fp)) != -1)

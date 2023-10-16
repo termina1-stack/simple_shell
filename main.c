@@ -24,7 +24,7 @@ int main(__attribute__((unused)) int argc, char **argv)
 		input = _getline();
 		if (input[0] == '\0')
 			continue;
-		history(input);
+		shell_history(input);
 		commands = spliter(input);
 		for (i = 0; commands[i] != NULL; i++)
 		{

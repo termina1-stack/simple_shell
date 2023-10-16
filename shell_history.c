@@ -1,11 +1,11 @@
 #include "simple_shell.h"
 
 /**
- * history - Function that writes file with user inputs
+ * shell_history - Function that writes file with user inputs
  * @input: input from our user
  * Return: 0 on success, -1 if failed
  */
-int history(char *input)
+int shell_history(char *input)
 {
 	char *filename = ".simple_shell_history";
 	ssize_t fd, w;

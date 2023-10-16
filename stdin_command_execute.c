@@ -6,7 +6,8 @@
  * @input: Input received from user
  * @c: Shell execution time case of command not found
  * @argv: Arguments before program starts
- * Return: 1 if case Command is Null, if -1 wrong command else 0 if command ic executed
+ * Return: 1 if case Command is Null, if -1 wrong command else 0 if command
+ * is executed
  */
 
 int execute_cmd(char **cmd, char *input, int c, char **argv)
