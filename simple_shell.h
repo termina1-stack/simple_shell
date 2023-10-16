@@ -18,11 +18,11 @@
 
 
 /**
- * struct _builtin - conatins built-in commands
+ * struct builtin_cmds - holds built-in commands
  * @command: - Built-in command
  * @function: - Pointer to custom functions
  */
-typedef struct _builtin
+typedef struct builtin_cmds
 {
 	char *command;
 	int (*function)(char **line, int st);
@@ -86,19 +86,14 @@ void help_cd(void);
 void help_exit(void);
 void help_shell(void);
 int display_help(char **cmd, __attribute__((unused))int st);
-
-/****** BUILTIN COMMAND HANDLERS AND EXECUTE ******/
-
 int check_builtin_cmd(char **cmd);
 int handle_builtin(char **cmd, int st);
 void exit_stat(char **cmd, char *input, char **argv, int c,
 		int stat);
 int change_dir(char **cmd, __attribute__((unused))int st);
-int dis_env(__attribute__((unused)) char **cmd,
-		__attribute__((unused)) int st);
+int d_env(__attribute__((unused)) char **cmd,	__attribute__((unused)) int st);
 int echo_bul(char **cmd, int st);
-int history_dis(__attribute__((unused))char **c,
-		__attribute__((unused)) int st);
+int d_histo(__attribute__((unused))char **c, __attribute__((unused)) int st);
 
 
 #endif

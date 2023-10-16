@@ -19,7 +19,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 }
 
 /**
- * fill_an_array - Function that fills an array by constant byte
+ * fill_array - Function that fills an array by constant byte
  *@a: void pointer
  *@el: int
  *@len: length for int

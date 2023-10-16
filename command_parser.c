@@ -1,7 +1,7 @@
 #include "simple_shell.h"
 
 /**
- * parse_cmd - Function that passes the command recieved from stdin
+ * command_parser - Function that passes the command recieved from stdin
  * @input: String from stdin
  * Return: Strings to be used arguments
  */

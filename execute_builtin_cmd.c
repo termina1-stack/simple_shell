@@ -33,12 +33,12 @@ int change_dir(char **cmd, __attribute__((unused))int st)
 }
 
 /**
- * dis_env - Function that display enviroment variable
+ * d_env - Function that display enviroment variable
  * @cmd: parsed command
  * @st: status of last command executed
  * Return: Always 0
  */
-int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int st)
+int d_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int st)
 {
 	size_t i;
 	int len;
@@ -87,12 +87,12 @@ int echo_bul(char **cmd, int st)
 }
 
 /**
- * history_dis - display history of user input on simple_shell
+ * d_histo - display history of user input on simple_shell
  * @c: parsed command
  * @st: status of last command executed
  * Return: 0 success or -1 if fail
  */
-int history_dis(__attribute__((unused))char **c, __attribute__((unused))int st)
+int d_histo(__attribute__((unused))char **c, __attribute__((unused))int st)
 {
 	char *line = NULL;
 	size_t len = 0;

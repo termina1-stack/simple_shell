@@ -40,10 +40,10 @@ int handle_builtin_cmd(char **cmd, int st)
 {
 	builtin built_in[] = {
 		{"echo", echo_bul},
-		{"env", dis_env},
+		{"env", d_env},
 		{"cd", change_dir},
 		{"help", display_help},
-		{"history", history_dis},
+		{"history", d_histo},
 		{NULL, NULL}
 	};
 	int i = 0;
